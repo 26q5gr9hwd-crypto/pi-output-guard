@@ -1,0 +1,23 @@
+{
+  "name": "pi-output-guard",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Universal token ceiling for pi-coding-agent tool_results. Catches ALL tools (built-in, MCP, custom, subagent), spills overflow to disk, and exposes an output_read tool for on-demand retrieval.",
+  "license": "MIT",
+  "author": "Dan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/26q5gr9hwd-crypto/pi-output-guard.git"
+  },
+  "homepage": "https://github.com/26q5gr9hwd-crypto/pi-output-guard#readme",
+  "bugs": { "url": "https://github.com/26q5gr9hwd-crypto/pi-output-guard/issues" },
+  "keywords": ["pi-package", "pi", "tokens", "context", "truncation"],
+  "main": "./dist/index.js",
+  "files": ["dist/", "README.md", "LICENSE"],
+  "pi": {
+    "extensions": ["./dist/index.js"]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": ">=0.50.0"
+  }
+}
