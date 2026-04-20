@@ -250,7 +250,7 @@ export default function piOutputGuard(pi) {
 
 	pi.registerCommand("output-guard", {
 		description: "Control pi-output-guard (stats | threshold <N> | enable | disable | doctor)",
-		async execute(ctx, args) {
+		handler: async (args, ctx) => {
 			const tokens = String(args || "").trim().split(/\s+/).filter(Boolean);
 			const sub = (tokens[0] || "stats").toLowerCase();
 			const ui = ctx?.ui?.notify ? ctx.ui : { notify: (m) => console.log(m) };
